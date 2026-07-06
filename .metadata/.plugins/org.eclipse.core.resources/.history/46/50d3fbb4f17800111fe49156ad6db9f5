@@ -1,0 +1,24 @@
+package com.coforge;
+
+import java.util.LinkedList;
+
+/**
+ * Hello world!
+ */
+public class App {
+    public static void main(String[] args) {
+       LinkedList<String> namesList = new LinkedList<String>();
+       namesList.add("aniket");
+       namesList.add("aniket");
+       namesList.add("anddket");
+       namesList.add("amuet");
+       namesList.add(null);
+       namesList.add(null);
+       System.out.println(namesList);
+       System.out.println("-----------");
+       namesList.addFirst("pooja");
+       namesList.addFirst("kala");
+       System.out.println(namesList);
+       
+    }
+}

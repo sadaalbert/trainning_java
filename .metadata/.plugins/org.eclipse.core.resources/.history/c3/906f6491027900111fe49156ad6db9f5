@@ -1,0 +1,21 @@
+package com.coforge;
+
+import java.util.List;
+import java.util.Vector;
+
+public class VectorMain {
+	public static void main(String[] args) {
+		Vector<Integer> vector = new Vector<Integer>();
+		vector.add(16);
+		vector.add(21);
+		vector.add(31);
+		
+		
+		System.out.println(vector);
+		System.out.println(vector.capacity());
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,121 @@
+package com.coforge;
+
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+
+public class LinkedhashSet {
+
+    public static void main(String[] args) {
+
+        LinkedHashSet<String> set = new LinkedHashSet<>();
+
+        // ---------------- add() ----------------
+        set.add("Aniket");
+        set.add("Pooja");
+        set.add("Rahul");
+        set.add("Karan");
+        set.add("Amit");
+
+        // Duplicate value (ignored)
+        set.add("Aniket");
+
+        // Only one null is allowed
+        set.add(null);
+        set.add(null);
+
+        System.out.println("LinkedHashSet : " + set);
+
+        // ---------------- size() ----------------
+        System.out.println("Size : " + set.size());
+
+        // ---------------- contains() ----------------
+        System.out.println("Contains Rahul : " + set.contains("Rahul"));
+
+        // ---------------- isEmpty() ----------------
+        System.out.println("Is Empty : " + set.isEmpty());
+
+        // ---------------- remove() ----------------
+        set.remove("Karan");
+        System.out.println("After remove() : " + set);
+
+        // ---------------- iterator() ----------------
+        System.out.println("\nIterator");
+
+        Iterator<String> itr = set.iterator();
+
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+
+        // ---------------- Enhanced For Loop ----------------
+        System.out.println("\nFor Each Loop");
+
+        for (String s : set) {
+            System.out.println(s);
+        }
+
+        // ---------------- clone() ----------------
+        LinkedHashSet<String> clone =
+                (LinkedHashSet<String>) set.clone();
+
+        System.out.println("\nCloned Set : " + clone);
+
+        // ---------------- equals() ----------------
+        System.out.println("Set equals Clone : " + set.equals(clone));
+
+        // ---------------- hashCode() ----------------
+        System.out.println("HashCode : " + set.hashCode());
+
+        // ---------------- addAll() ----------------
+        LinkedHashSet<String> set2 = new LinkedHashSet<>();
+
+        set2.add("Java");
+        set2.add("Python");
+        set2.add("C++");
+
+        set.addAll(set2);
+
+        System.out.println("\nAfter addAll() : " + set);
+
+        // ---------------- containsAll() ----------------
+        System.out.println("Contains All : " + set.containsAll(set2));
+
+        // ---------------- removeAll() ----------------
+        LinkedHashSet<String> temp1 = new LinkedHashSet<>(set);
+
+        temp1.removeAll(set2);
+
+        System.out.println("After removeAll() : " + temp1);
+
+        // ---------------- retainAll() ----------------
+        LinkedHashSet<String> temp2 = new LinkedHashSet<>(set);
+
+        temp2.retainAll(set2);
+
+        System.out.println("After retainAll() : " + temp2);
+
+        // ---------------- toArray() ----------------
+        Object[] arr = set.toArray();
+
+        System.out.print("Array : ");
+
+        for (Object obj : arr) {
+            System.out.print(obj + " ");
+        }
+
+        System.out.println();
+
+        // ---------------- clear() ----------------
+        LinkedHashSet<String> temp3 = new LinkedHashSet<>(set);
+
+        temp3.clear();
+
+        System.out.println("\nAfter clear() : " + temp3);
+
+        // ---------------- isEmpty() ----------------
+        System.out.println("Temp3 is Empty : " + temp3.isEmpty());
+
+        // ---------------- toString() ----------------
+        System.out.println("toString() : " + set.toString());
+    }
+}
