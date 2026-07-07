@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.coforge.LinkedHashSet.java&apos; to &apos;LinkedhashSet.java&apos;&#x0A;- Original project: &apos;day6juluy&apos;&#x0A;- Original element: &apos;com.coforge.LinkedHashSet.java&apos;&#x0A;- Renamed element: &apos;com.coforge.LinkedhashSet.java&apos;" description="Rename compilation unit &apos;LinkedHashSet.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.coforge{LinkedHashSet.java" name="LinkedhashSet.java" references="false" stamp="1783328566955" version="1.0"/>
+</session>
